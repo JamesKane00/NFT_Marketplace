@@ -10,7 +10,7 @@ contract NFT is ERC721URIStorage {
     Counters.Counter private _tokenCount;
     address contractAddress;
 
-    constructor(address marketplaceAddress) ERC721("Chain NFTs", "CHAINFT"){
+    constructor(address marketplaceAddress) ERC721("Chain NFTs", "CHNFT"){
         contractAddress = marketplaceAddress;
     }
     function mint(string memory _tokenURI) external returns(uint) {
@@ -21,4 +21,5 @@ contract NFT is ERC721URIStorage {
         setApprovalForAll(contractAddress, true);
         return(newItemId);
     }
+
 }
